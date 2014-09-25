@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="WeightedValues">
+  <DataContextMoniker Name="/WeightedValuesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="db886647-973b-4502-8431-5af4b8040f62" absoluteBounds="0.75, 1, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/WeightedValuesDataContext/Education" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5eb6d4aa-8f5e-49b8-a6fe-31d231f82db5" absoluteBounds="0.765, 1.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="313f158b-a35c-48c8-9960-f8fa2e7d819f" absoluteBounds="3.5, 0.875, 2, 1.3862939453124998">
+      <DataClassMoniker Name="/WeightedValuesDataContext/EducationKeyword" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d6a71113-5365-4a55-ac93-a259975d8488" absoluteBounds="3.515, 1.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8ba22b29-cdcd-468f-8d72-42504d7dfe00" absoluteBounds="0.75, 4, 2, 1.193992513020834">
+      <DataClassMoniker Name="/WeightedValuesDataContext/Keyword" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da7bfa11-ea43-4c20-bfc6-ba61b623ac1b" absoluteBounds="0.765, 4.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.59699625651042); (3.5 : 1.59699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WeightedValuesDataContext/Education/Education_EducationKeyword" />
+      <nodes>
+        <classShapeMoniker Id="db886647-973b-4502-8431-5af4b8040f62" />
+        <classShapeMoniker Id="313f158b-a35c-48c8-9960-f8fa2e7d819f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.59699625651042); (4.5 : 4.59699625651042); (4.5 : 2.2612939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WeightedValuesDataContext/Keyword/Keyword_EducationKeyword" />
+      <nodes>
+        <classShapeMoniker Id="8ba22b29-cdcd-468f-8d72-42504d7dfe00" />
+        <classShapeMoniker Id="313f158b-a35c-48c8-9960-f8fa2e7d819f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

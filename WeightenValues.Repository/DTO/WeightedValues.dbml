@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="weightedvalues_db" Class="WeightedValuesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=gr5uoqr9oh.database.windows.net;Initial Catalog=weightedvalues_db;User ID=wvuser;Connect Timeout=60" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="weightedvalues_dbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Education" Member="Educations">
+    <Type Name="Education">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="Education_EducationKeyword" Member="EducationKeywords" ThisKey="ID" OtherKey="EducationID" Type="EducationKeyword" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EducationKeyword" Member="EducationKeywords">
+    <Type Name="EducationKeyword">
+      <Column Name="EducationID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="KeywordID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Weight" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Education_EducationKeyword" Member="Education" ThisKey="EducationID" OtherKey="ID" Type="Education" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Keyword_EducationKeyword" Member="Keyword" ThisKey="KeywordID" OtherKey="ID" Type="Keyword" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Keyword" Member="Keywords">
+    <Type Name="Keyword">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="Keyword_EducationKeyword" Member="EducationKeywords" ThisKey="ID" OtherKey="KeywordID" Type="EducationKeyword" />
+    </Type>
+  </Table>
+</Database>

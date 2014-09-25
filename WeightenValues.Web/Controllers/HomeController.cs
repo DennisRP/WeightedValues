@@ -11,7 +11,11 @@ namespace WeightedValues.Web.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            // Redirect to the only page with real content for now - the administration page
+            // (This is only temporary)
+            return RedirectToAction("Index", "Administration");
+
+            //return View();
         }
     }
 }

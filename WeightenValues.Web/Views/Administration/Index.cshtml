@@ -1,0 +1,34 @@
+﻿@model WeightenValues.Web.Models.WeightedValuesViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Administration</title>
+</head>
+<body>
+    <section> 
+        <h1>Uddannelser</h1>
+        <ul>
+            @foreach (var education in Model.Educations)
+            {
+                <li>@education.Value</li>                
+            }
+        </ul>
+    </section>
+    <section>
+        <h1>Keywords</h1>
+        <ul>
+            @foreach (var keyword in Model.Keywords)
+            {
+                <li>@keyword.Value</li>
+            }
+        </ul>
+    </section>
+</body>
+</html>
